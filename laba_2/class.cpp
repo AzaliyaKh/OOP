@@ -161,14 +161,14 @@ class Parent {
 
 class Child: public Parent {
  public:
-  Child() {
+  Child(): p() {
     cout << "Child is created" << endl;
 
     cout << "Create pointer: ";
     ptr_parent = new Parent;
 
     cout << "Create object: ";
-    Parent p;
+    // Parent p;
   }
 
 
@@ -188,4 +188,18 @@ class Child: public Parent {
 
  private:
   Parent *ptr_parent;
+  Parent p;
 };
+
+
+class A {
+public:
+  A() {
+    cout << "I am created!\n";
+  }
+  ~A() {
+    cout << "I am dyed!\n";
+  }
+};
+
+class B: public A {};

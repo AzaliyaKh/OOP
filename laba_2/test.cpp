@@ -23,6 +23,8 @@ void TestCreateObjects() {
     Device d1;
     Device d2("Apple", 3000, "black");
     Device d3(d2);
+
+    SmartPhone sm;
 }
 
 void TestObjectAndPointer() {
@@ -55,7 +57,7 @@ void TestPointerCopy() {
     d2->Print();
 }
 
-void Test() {
+void TestDiffTypes() {
     Device *d = new Device();
     Device *smAsDevice = new SmartPhone();
     SmartPhone *sm = new SmartPhone();
@@ -73,7 +75,19 @@ void Test() {
     delete sm;
 }
 
+void Test() {
+    // A a;
+    B b;
+}
+
 
 int main() {
+    // TestAccesModifiers();
+    // TestStaticDynamic();
+    // TestCreateObjects();
+    // TestObjectAndPointer();
+    // TestObjectCopy();
+    // TestPointerCopy();
+    // TestDiffTypes();
     Test();
 }
